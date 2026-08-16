@@ -25,8 +25,8 @@ app.set("trust proxy", 1)
 app.use(cors({
     origin: ["http://localhost:3000", "http://52.54.36.69:3000", "http://52.54.36.69:3001", "https://dashboard.devshimul.com", "https://app.devshimul.com"],
     // methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
-    credentials: true, 
-  }))
+    credentials: true,
+}))
 
 app.use("/api/v1", router)
 
@@ -180,7 +180,7 @@ app.get("/", (req: Request, res: Response) => {
         <div class="scanlines"></div>
         <div class="terminal-container">
             <div class="header">
-                <h1>Texas Precision Core API</h1>
+                <h1>Topline Roofing - Core API</h1>
                 <span>STATE: <span style="color: #00ff41">SECURE</span> <span class="status-blink">█</span></span>
             </div>
 
