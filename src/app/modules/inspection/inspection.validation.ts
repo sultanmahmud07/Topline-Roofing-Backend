@@ -13,7 +13,7 @@ export const createInspectionSchema = z.object({
     notes: z.string().optional(),
     scheduledDate: z.string().min(1, "Scheduled date is required"),
     scheduledTime: z.string().min(1, "Scheduled time is required"),
-    sender: z.enum(['DFW_ESTIMATE', 'ABILENE_INSPECTION'])
+    sender: z.enum(['DFW_ESTIMATE', 'STANDARD_ESTIMATE', 'ABILENE_INSPECTION'])
 });
 
 // For Admin updates (e.g., changing status to Confirmed)
