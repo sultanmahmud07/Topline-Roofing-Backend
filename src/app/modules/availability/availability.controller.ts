@@ -4,7 +4,6 @@ import { sendResponse } from "../../utils/sendResponse";
 import { AvailabilityService } from "./availability.service";
 
 const createAvailability = catchAsync(async (req: Request, res: Response) => {
-    // Extract the array from the 'schedules' key
     const payloadArray = req.body.schedules;
     const result = await AvailabilityService.createOrUpdateAvailability(payloadArray);
     sendResponse(res, {
@@ -27,7 +26,6 @@ const getAllAvailable = catchAsync(async (req: Request, res: Response) => {
     });
 });
 const getAvailableDates = catchAsync(async (req: Request, res: Response) => {
-    // Expecting query params like ?startDate=2026-04-01&endDate=2026-04-30
     const { startDate, endDate } = req.query;
 
     const result = await AvailabilityService.getAvailableDates(startDate as string, endDate as string);
