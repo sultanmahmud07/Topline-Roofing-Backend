@@ -31,5 +31,5 @@ export const updateInspectionSchema = z.object({
     scheduledDate: z.string().optional(),
     scheduledTime: z.string().optional(),
     status: z.enum(['Pending', 'Confirmed', 'Completed', 'Cancelled']).optional(),
-    sender: z.enum(['DFW_ESTIMATE', 'ABILENE_INSPECTION']).optional()
+    sender: z.enum(['DFW_ESTIMATE', 'STANDARD_ESTIMATE', 'ABILENE_INSPECTION']).optional()
 });
