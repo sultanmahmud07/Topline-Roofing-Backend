@@ -44,7 +44,7 @@ const createInspection = async (payload: IInspection) => {
     // 5. Send notification email to Admin
     const adminEmailSubject = `New Inspection Scheduled - ${payload.firstName} ${payload.lastName} - ${serviceName}`;
     sendEmail({
-        to: "marketing@txprecisionroofs.com",
+        to: "Info@toplineroofs.com",
         subject: adminEmailSubject,
         templateName: "adminInspectionNotification",
         templateData: {
@@ -113,7 +113,7 @@ const updateInspection = async (id: string, payload: Partial<IInspection>) => {
 
 const getBookedSlots = async (date?: string) => {
     const today = new Date().toISOString().split('T')[0];
-    
+
     if (date && date < today) {
         return [];
     }
