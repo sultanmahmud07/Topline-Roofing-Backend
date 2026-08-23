@@ -15,7 +15,7 @@ exports.createInspectionSchema = zod_1.z.object({
     notes: zod_1.z.string().optional(),
     scheduledDate: zod_1.z.string().min(1, "Scheduled date is required"),
     scheduledTime: zod_1.z.string().min(1, "Scheduled time is required"),
-    sender: zod_1.z.enum(['DFW_ESTIMATE', 'ABILENE_INSPECTION'])
+    sender: zod_1.z.enum(['DFW_ESTIMATE', 'STANDARD_ESTIMATE', 'ABILENE_INSPECTION'])
 });
 // For Admin updates (e.g., changing status to Confirmed)
 exports.updateInspectionSchema = zod_1.z.object({
@@ -32,5 +32,5 @@ exports.updateInspectionSchema = zod_1.z.object({
     scheduledDate: zod_1.z.string().optional(),
     scheduledTime: zod_1.z.string().optional(),
     status: zod_1.z.enum(['Pending', 'Confirmed', 'Completed', 'Cancelled']).optional(),
-    sender: zod_1.z.enum(['DFW_ESTIMATE', 'ABILENE_INSPECTION']).optional()
+    sender: zod_1.z.enum(['DFW_ESTIMATE', 'STANDARD_ESTIMATE', 'ABILENE_INSPECTION']).optional()
 });

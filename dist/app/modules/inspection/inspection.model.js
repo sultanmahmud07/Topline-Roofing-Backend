@@ -22,7 +22,7 @@ const InspectionSchema = new mongoose_1.Schema({
     },
     sender: {
         type: String,
-        enum: ['DFW_ESTIMATE', 'ABILENE_INSPECTION'],
+        enum: ['DFW_ESTIMATE', 'STANDARD_ESTIMATE', 'ABILENE_INSPECTION'],
         required: true
     }
 }, {

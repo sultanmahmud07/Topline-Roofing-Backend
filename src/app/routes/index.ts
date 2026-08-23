@@ -7,6 +7,7 @@ import { OtpRoutes } from "../modules/otp/otp.route"
 import { ReviewRoutes } from "../modules/review/review.route"
 import { AvailabilityRoutes } from "../modules/availability/availability.route"
 import { AddressRoutes } from "../modules/address/address.route"
+import { StateRoutes } from "../modules/state/state.route"
 import { InspectionRoutes } from "../modules/inspection/inspection.route"
 import { GmailRoutes } from "../modules/gmail/gmail.route"
 
@@ -32,6 +33,10 @@ const moduleRoutes = [
     {
         path: "/address",
         route: AddressRoutes
+    },
+    {
+        path: "/state",
+        route: StateRoutes
     },
     {
         path: "/inspection",

@@ -10,6 +10,7 @@ const otp_route_1 = require("../modules/otp/otp.route");
 const review_route_1 = require("../modules/review/review.route");
 const availability_route_1 = require("../modules/availability/availability.route");
 const address_route_1 = require("../modules/address/address.route");
+const state_route_1 = require("../modules/state/state.route");
 const inspection_route_1 = require("../modules/inspection/inspection.route");
 const gmail_route_1 = require("../modules/gmail/gmail.route");
 exports.router = (0, express_1.Router)();
@@ -33,6 +34,10 @@ const moduleRoutes = [
     {
         path: "/address",
         route: address_route_1.AddressRoutes
+    },
+    {
+        path: "/state",
+        route: state_route_1.StateRoutes
     },
     {
         path: "/inspection",

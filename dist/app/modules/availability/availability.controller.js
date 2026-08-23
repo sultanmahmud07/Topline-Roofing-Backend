@@ -14,7 +14,6 @@ const catchAsync_1 = require("../../utils/catchAsync");
 const sendResponse_1 = require("../../utils/sendResponse");
 const availability_service_1 = require("./availability.service");
 const createAvailability = (0, catchAsync_1.catchAsync)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // Extract the array from the 'schedules' key
     const payloadArray = req.body.schedules;
     const result = yield availability_service_1.AvailabilityService.createOrUpdateAvailability(payloadArray);
     (0, sendResponse_1.sendResponse)(res, {
@@ -36,7 +35,6 @@ const getAllAvailable = (0, catchAsync_1.catchAsync)((req, res) => __awaiter(voi
     });
 }));
 const getAvailableDates = (0, catchAsync_1.catchAsync)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // Expecting query params like ?startDate=2026-04-01&endDate=2026-04-30
     const { startDate, endDate } = req.query;
     const result = yield availability_service_1.AvailabilityService.getAvailableDates(startDate, endDate);
     (0, sendResponse_1.sendResponse)(res, {
